@@ -1,9 +1,11 @@
-import React from 'react'
-
+import CoursecardSection from "../components/CoursecardSection";
 export default function Courses() {
   return (
-    <div>
-      
-    </div>
+    <section id="Course_Section ">
+  
+<CoursecardSection type="CBSE" heading="CBSE and OdishaBoard"></CoursecardSection>
+    <CoursecardSection type="ScienceCommerce" heading="Science and Commerce"></CoursecardSection>
+      <CoursecardSection type="Software" heading="Software Development"></CoursecardSection>
+ </section>
   )
 }

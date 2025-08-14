@@ -1,38 +1,39 @@
-import { createBrowserRouter, RouterProvider} from "react-router-dom"
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import MainLayout from "../layout/MainLayout";
-// pages...
-import Home from "../pages/Home";
-import About from "../pages/About";
-import Notification from "../pages/Notification";
-import Errorpage from "../pages/Errorpage";
-const routes=createBrowserRouter([
-    {
-        path:"/",
-        element:<MainLayout/>,
-        children:[{
-            index:true,
-            element:<Home/>
-        },
-        {
-            path:"/about",
-            element:<About/>
-        },
-        {
-            path:"/Notification",
-            element:<Notification/>
-        },
-        
-    ]
-      
-    },
-    {
-            path:"*",
-            element:<Errorpage/>
-    }
+// Loader Component
+const Loader = () => <div className="p-6 text-center">Loading...</div>;
+const Loadable = (Component) => (props) =>
+  (
+    <Suspense fallback={<Loader />}>
+      <Component {...props} />
+    </Suspense>
+  );
 
-])
-export default function Approutes() {
-  return (
-    <RouterProvider router={routes}></RouterProvider>
-  )
+// Lazy load pages with auto Suspense wrapper
+const Home = Loadable(lazy(() => import("../pages/Home")));
+const About = Loadable(lazy(() => import("../pages/About")));
+const ErrorPage = Loadable(lazy(() => import("../pages/Errorpage")));
+const Contact=Loadable(lazy(() => import("../pages/Contact")));
+const Courses=Loadable(lazy(() => import("../pages/Courses")));
+const routes = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <Suspense fallback={<Loader />}>
+        <MainLayout />
+      </Suspense>
+    ),
+    children: [
+      { index: true, element: <Home /> },
+      { path: "about", element: <About /> },
+      { path: "Courses", element: <Courses/> },
+      { path: "Contact", element: <Contact /> },
+    ],
+  },
+  { path: "*", element: <ErrorPage /> },
+]);
+
+export default function AppRoutes() {
+  return <RouterProvider router={routes} />;
 }
