@@ -5,7 +5,7 @@ export default function Hero() {
   return (
       <section>
       {/*Hero Text Section============================================================================ */}
-      <HeroSection text1="Best Learning " text2="Education Platform" img={HeroLottieimg}></HeroSection>
+      <HeroSection text1="Your all in one  " text2=" learning platform" img={HeroLottieimg}></HeroSection>
       <Courses></Courses>
     </section>
    
