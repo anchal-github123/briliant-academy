@@ -20,9 +20,7 @@ const routes = createBrowserRouter([
   {
     path: "/",
     element: (
-      <Suspense fallback={<Loader />}>
-        <MainLayout />
-      </Suspense>
+     <MainLayout></MainLayout>
     ),
     children: [
       { index: true, element: <Home /> },
