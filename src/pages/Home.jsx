@@ -1,4 +1,4 @@
-import HeroSection from "../components/heroSection";
+import HeroSection from "../components/HeroSection";
 import HeroLottieimg from "../assets/LottieIcon/STUDENT.json";
 import { Suspense,lazy } from "react";
 const Courses=lazy(() => import("./Courses"));

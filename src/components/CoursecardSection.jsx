@@ -41,9 +41,7 @@ export default function CoursecardSection({ type,heading }) {
     
   }
 // Avoid rendering if no match found'
-
-  
-  return (
+return (
     <motion.div className="mt-2"   ref={ref}  
           
           initial="hidden"

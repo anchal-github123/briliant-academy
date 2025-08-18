@@ -14,9 +14,9 @@ export default function CourseCard({courseinfo}) {
       <h3 className="text-xl font-bold">
     {courseinfo?.name}
       </h3>
-      <img src={courseinfo.img} loading="lazy" alt="course image"></img>
+      <img src={courseinfo.img} loading="lazy" alt="course image"  className="w-full h-auto object-cover rounded-md"></img>
       {courseinfo?.price && (
-        <p className="text-gray-700 font-bold mt-1">Price: {courseinfo.price}</p>
+        <p className="text-para">Price: {courseinfo.price}</p>
         
       )}
 </div>
