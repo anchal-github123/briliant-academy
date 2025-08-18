@@ -14,19 +14,18 @@ export default function CoursecardSection({ type,heading }) {
     }
   }, [controls, inView]);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.1,
-        duration: 0.5,
-        ease: "easeOut",
-      },
-    }),
-  };
-
+const cardVariants = {
+  hidden: { opacity: 0, x: 100 }, // off-screen right
+  visible: (i) => ({
+    opacity: 1,
+    x: 0, // slide into place
+    transition: {
+      delay: i * 0.1,
+      duration: 0.6,
+      ease: "easeOut",
+    },
+  }),
+};
 
 
   let coursetype = [];

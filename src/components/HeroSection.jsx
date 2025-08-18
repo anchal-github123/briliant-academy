@@ -9,7 +9,7 @@ return (
     <div className='grid lg:grid-cols-2 container'>
   <div className="mt-5 flex flex-col justify-center gap-5 lg:mt-0 " >
       <h1 className="text-3xl font-heading font-semibold lg:text-4xl ">
-        {text1}<br />
+        {text1}
         <span className="text-primary">{text2}</span> 
       </h1>
       <p className="text-para text-[1.2rem] ">
