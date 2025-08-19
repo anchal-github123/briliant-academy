@@ -14,7 +14,14 @@ export default function CourseCard({courseinfo}) {
       <h3 className="text-xl font-bold">
     {courseinfo?.name}
       </h3>
-      <img src={courseinfo.img} loading="lazy" alt="course image"  className="w-full h-auto object-cover rounded-md"></img>
+    <img
+  src={courseinfo.img}
+  alt="course image"
+  loading="lazy"
+  width="400"
+  height="300"
+  className="w-full h-auto object-cover rounded-md"
+/>
       {courseinfo?.price && (
         <p className="text-para">Price: {courseinfo.price}</p>
         

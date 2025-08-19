@@ -35,12 +35,10 @@ if (type === "CBSE") {
     coursetype = scienceAndCommerce;
   } else if (type === "Software") {
     coursetype = softwareDevelopment;
-    
   }
 
 return (
-    <motion.div className="mt-2"   ref={ref}  
-          
+    <motion.div className="mt-2" ref={ref}  
           initial="hidden"
           animate={controls}
           variants={cardVariants}>
