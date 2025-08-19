@@ -10,7 +10,7 @@ export default function MobileNav({ navitems }) {
 
 return (
     <>
-      {/* Hamburger Button */}
+
       <motion.div
         whileTap={{ scale: 0.8 }}
         animate={{ rotate: mobileOpen ? 90 : 0 }}
@@ -21,7 +21,7 @@ return (
         {mobileOpen ? <X size={28} /> : <AlignJustify size={28} />}
       </motion.div>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu========================================================================== */}
       {mobileOpen && (
         <motion.div
           initial={{ x: "-100%", opacity: 0 }}

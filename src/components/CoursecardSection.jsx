@@ -15,10 +15,10 @@ export default function CoursecardSection({ type,heading }) {
   }, [controls, inView]);
 
 const cardVariants = {
-  hidden: { opacity: 0, x: 100 }, // off-screen right
+  hidden: { opacity: 0, x: 100 }, 
   visible: (i) => ({
     opacity: 1,
-    x: 0, // slide into place
+    x: 0, 
     transition: {
       delay: i * 0.1,
       duration: 0.6,
@@ -29,9 +29,7 @@ const cardVariants = {
 
 
   let coursetype = [];
-
-  // Make sure type matches exactly what you send
-  if (type === "CBSE") {
+if (type === "CBSE") {
     coursetype = cbseAndOdishaBoard;
   } else if (type === "ScienceCommerce") {
     coursetype = scienceAndCommerce;
@@ -39,7 +37,7 @@ const cardVariants = {
     coursetype = softwareDevelopment;
     
   }
-// Avoid rendering if no match found'
+
 return (
     <motion.div className="mt-2"   ref={ref}  
           
