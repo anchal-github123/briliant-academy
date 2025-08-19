@@ -29,7 +29,7 @@ export default function CourseCard({courseinfo}) {
 </div>
       {/* Button */}
       <div className="w-full flex items-center justify-center">
-       <NavLink to="/Contact" className="bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-800 hover:to-blue-700 text-white text-sm font-semibold px-5 py-2 rounded-md shadow-md transition-all">
+       <NavLink to="/Contact" className="bg-gradient-to-r from-blue-500 to-blue-600  hover:from-blue-800 hover:to-blue-700 text-white text-sm font-semibold px-6 py-2 rounded-md shadow-md transition-all">
           Registration
         </NavLink>
       </div>

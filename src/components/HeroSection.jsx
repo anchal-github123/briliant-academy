@@ -17,7 +17,8 @@ return (
         </p>
        <div className="flex items-center justify-center gap-3 lg:justify-start">
           <Button name="Contact Us" styleType="outline"  link= "Contact"/>
-         <a href="#Course_Section" className="bg-primary text-white hover:bg-white hover:text-primary px-5 py-2 rounded-full shadow-md border-3 inline-block">Explor More</a>
+           <Button name="Explore More" styleType="primary"  link= "Courses"/>
+
         </div>
 
       </div>
