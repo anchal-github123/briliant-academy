@@ -20,8 +20,7 @@ return (
            <Button name="Explore More" styleType="primary"  link= "Courses"/>
 
         </div>
-
-      </div>
+        </div>
       {/* Hero lottie Image */}
        <div className="w-full flex justify-center items-center">
         <Lottie animationData={img} loop={true} className={lottieClass}   aria-hidden="true"  />
